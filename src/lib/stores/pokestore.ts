@@ -13,6 +13,7 @@ export const fetchPokemon = async (num: number) => {
 	const url = `https://pokeapi.co/api/v2/pokemon?limit=${num}`;
 	const res = await fetch(url);
 	const data = await res.json();
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const loadedPokemon: Pokemon[] = data.results.map((data: any, index: number) => ({
 		name: data.name,
 		id: index + 1,
