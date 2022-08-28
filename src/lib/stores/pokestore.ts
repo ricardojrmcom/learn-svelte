@@ -1,5 +1,4 @@
 import { writable } from 'svelte/store';
-import type { Writable } from 'svelte/store';
 
 export interface Pokemon {
 	name: string;
@@ -7,7 +6,7 @@ export interface Pokemon {
 	image: string;
 }
 
-export const pokemon: Writable<Pokemon[]> = writable([]);
+export const pokemon = writable<Pokemon[]>([]);
 
 export const fetchPokemon = async (num: number) => {
 	const url = `https://pokeapi.co/api/v2/pokemon?limit=${num}`;

@@ -8,10 +8,12 @@
 </svelte:head>
 
 <section>
-	<div>
-		<Nav />
+	<div class="p-8 max-w-6xl mx-auto">
+		<div class="mb-6">
+			<Nav />
+		</div>
+		<h1 class="text-3xl font-bold text-center">ABOUT</h1>
 	</div>
-	<h1>About</h1>
 </section>
 
 <style>
